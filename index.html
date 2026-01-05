@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dextra | Hand Rehabilitation System</title>
+  <title>Dextra | Wearable Hand Rehabilitation System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -17,38 +17,70 @@
     header {
       background: #0f172a;
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     header h1 {
+      font-size: 44px;
       margin-bottom: 10px;
-      font-size: 42px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     h2 {
       color: #0f172a;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .card {
       background: white;
-      padding: 25px;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      margin-bottom: 35px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .img-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .img-box {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .img-box img {
+      width: 100%;
+      max-width: 320px;
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      margin-bottom: 25px;
     }
 
     .download-btn {
       display: inline-block;
       margin-top: 15px;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background: #0f172a;
       color: white;
       text-decoration: none;
@@ -56,15 +88,11 @@
       font-weight: bold;
     }
 
-    .download-btn:hover {
-      background: #020617;
-    }
-
     footer {
       background: #0f172a;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 18px;
       font-size: 14px;
     }
   </style>
@@ -74,51 +102,140 @@
 
 <header>
   <h1>Dextra</h1>
-  <p>Smart Hand Rehabilitation System</p>
+  <p>An affordable, wearable hand rehabilitation system for restoring functional independence</p>
 </header>
 
 <section>
 
   <div class="card">
-    <h2>About the Product</h2>
+    <h2>Problem Statement</h2>
     <p>
-      Dextra is a low-cost hand rehabilitation system designed to assist patients
-      recovering from stroke or hand injuries. The device enables controlled
-      finger and wrist movements using a mobile application and smart actuators,
-      making rehabilitation accessible and portable.
+      Patients with stroke, spinal cord injuries, or neuromuscular disorders often lose wrist–hand
+      function, severely affecting their ability to perform daily activities. Passive splints fail
+      to provide active movement, while advanced robotic exoskeletons remain bulky, expensive, and
+      inaccessible to most users.
     </p>
   </div>
 
   <div class="card">
-    <h2>Technical Limitations</h2>
+    <h2>Proposed Solution: Dextra</h2>
+    <p>
+      Dextra is an active, wearable robotic orthosis designed to assist natural hand movements.
+      It enables essential grasping actions—gripping, holding, and controlled release—supporting
+      Activities of Daily Living (ADLs) while remaining lightweight, reliable, and affordable.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>USPs of the Product</h2>
     <ul>
-      <li>Limited to predefined motion ranges</li>
-      <li>Requires Bluetooth connection with the mobile app</li>
-      <li>Not intended to replace professional physiotherapy</li>
-      <li>Designed for supervised or assisted use</li>
+      <li>Adjustable, comfortable, and lightweight wearable design</li>
+      <li>Simple, robust, and reliable mechanical construction</li>
+      <li>Multiple control modes: switch, mobile app, and voice control</li>
+      <li>Affordable solution compared to advanced robotic systems</li>
+      <li>Future-scalable architecture using ESP32 microcontroller</li>
+      <li>Compatible with sensors and future EMG-based control</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>Download the Mobile App</h2>
+    <h2>Working Demonstration</h2>
+
+    <h3>Finger Movement</h3>
+    <div class="img-row">
+      <div class="img-box">
+        <img src="finger-flexion.jpg">
+        <p><b>Flexion:</b> Fingers close to enable grasping</p>
+      </div>
+      <div class="img-box">
+        <img src="finger-hold.jpg">
+        <p><b>Hold:</b> Stable 3-jaw chuck grip</p>
+      </div>
+      <div class="img-box">
+        <img src="finger-extension.jpg">
+        <p><b>Extension:</b> Fingers open for release</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px;">Wrist Articulation</h3>
+    <div class="img-row">
+      <div class="img-box">
+        <img src="wrist-up.jpg">
+        <p><b>Up:</b> Wrist extension</p>
+      </div>
+      <div class="img-box">
+        <img src="wrist-neutral.jpg">
+        <p><b>Stop:</b> Neutral holding posture</p>
+      </div>
+      <div class="img-box">
+        <img src="wrist-down.jpg">
+        <p><b>Down:</b> Wrist flexion for firm grasp</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Control Modes</h2>
+    <ul>
+      <li>Switch-controlled mode for basic rehabilitation</li>
+      <li>Mobile app control for customizable therapy</li>
+      <li>Voice-controlled operation for hands-free accessibility</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Benefits & Impact</h2>
+    <ul>
+      <li>Restores functional grip for daily activities</li>
+      <li>Promotes independence and reduces caregiver reliance</li>
+      <li>Cost-effective alternative to robotic prosthetics</li>
+      <li>Improves confidence and overall quality of life</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Why Dextra Is Different</h2>
+    <ul>
+      <li>Unlike passive splints, Dextra provides active movement</li>
+      <li>Unlike robotic exoskeletons, it is lightweight and affordable</li>
+      <li>Designed specifically for home-based rehabilitation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Safety & Limitations</h2>
+    <ul>
+      <li>Motion limits implemented for user safety</li>
+      <li>Supervised use recommended</li>
+      <li>Prototype-stage device, not clinically certified</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Team Dextra</h2>
     <p>
-      Click the button below to download the Dextra Android application.
+      A multidisciplinary student team working on affordable assistive rehabilitation technologies,
+      integrating hardware, software, and biomedical engineering.
     </p>
+  </div>
 
-    <a class="download-btn" href="Dextra%20(7).apk" download>
-      Download APK
-    </a>
+  <div class="card">
+    <h2>Download Mobile App</h2>
+    <a class="download-btn" href="Dextra%20(7).apk" download>Download APK</a>
+  </div>
 
-    <p style="margin-top:15px;font-size:14px;">
-      After downloading, enable <b>Install from Unknown Sources</b> in your
-      Android settings.
+  <div class="card">
+    <h2>Disclaimer</h2>
+    <p>
+      Dextra is an academic prototype developed for research and demonstration purposes only.
+      It is not a certified medical device and should not replace professional medical treatment.
     </p>
   </div>
 
 </section>
 
 <footer>
-  © 2026 Dextra Rehabilitation Project
+  © 2026 Team Dextra | Rehabilitation Technology Project
 </footer>
 
 </body>
